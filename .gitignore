@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Editor directories and files
+.vscode/
+*.swp
+*.swo
+
+# Local logs
+npm-debug.log*
+
+# Local server
+.env

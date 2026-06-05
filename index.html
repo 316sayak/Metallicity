@@ -55,6 +55,32 @@ button {
 
 
 </style>
+<style>
+.comment-section {
+    margin-top: 12px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+.comment-list { margin-bottom: 8px; }
+.comment-item {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+.comment-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+.comment-submit {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
@@ -1458,6 +1484,62 @@ function toggleSection(id) {
         x.style.display = "block";
     }
 }
+
+// Comment UI: attach a comment area to every .panel and persist to localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const panels = Array.from(document.querySelectorAll('.panel'));
+    panels.forEach((panel, idx) => {
+        if (!panel.id) panel.id = 'panel-' + (idx + 1);
+        const id = panel.id;
+
+        // create comment section
+        const cs = document.createElement('div');
+        cs.className = 'comment-section';
+        cs.innerHTML = `
+            <h3>Comments</h3>
+            <div class="comment-list" data-for="${id}"></div>
+            <textarea class="comment-input" placeholder="Add a comment"></textarea>
+            <button class="comment-submit">Post</button>
+        `;
+        panel.appendChild(cs);
+    });
+
+    function storageKey(id) { return location.pathname + '::' + id + '::comments'; }
+    function loadComments(id) {
+        try { return JSON.parse(localStorage.getItem(storageKey(id))) || []; } catch(e) { return []; }
+    }
+    function saveComments(id, arr) { localStorage.setItem(storageKey(id), JSON.stringify(arr)); }
+
+    panels.forEach(panel => {
+        const id = panel.id;
+        const list = panel.querySelector('.comment-list');
+        const input = panel.querySelector('.comment-input');
+        const btn = panel.querySelector('.comment-submit');
+
+        function render() {
+            const comments = loadComments(id);
+            list.innerHTML = '';
+            comments.forEach(c => {
+                const d = document.createElement('div');
+                d.className = 'comment-item';
+                d.textContent = c;
+                list.appendChild(d);
+            });
+        }
+
+        btn.addEventListener('click', () => {
+            const v = input.value.trim();
+            if (!v) return;
+            const comments = loadComments(id);
+            comments.push(v);
+            saveComments(id, comments);
+            input.value = '';
+            render();
+        });
+
+        render();
+    });
+});
 </script>
 
 </body>
