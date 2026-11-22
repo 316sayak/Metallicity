@@ -19,3 +19,7 @@ npm-debug.log*
 
 # Local server
 .env
+
+# macOS resource forks / backups
+._*
+*.bak_*

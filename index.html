@@ -1,1703 +1,225 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Metallicity</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#content {
-    display: none;
-    margin-top: 20px;
-}
-
-
-.panel1 {
-    /*height: 500px;*/ 
-    height: 800px;
-    width: 300px;
-    border: 1px solid #999;
-    margin-bottom: 15px;
-    overflow-y: auto;
-    padding: 10px;
-    resize: both;
-}
-
-.panel {
-  height:500px;
-  border: 1px solid #999;
-  margin-bottom: 15px;
-  overflow-y:auto;
-  padding: 10px;
-  resize: both;
-}
-
-.pdf {
-    width: 100%;
-    height: 700px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-.image1 {
-    width: 100%;
-    margin-bottom: 20px;
-    height: auto;
-    display: block;
-}
-.image2 {
-    width: 30%;
-    margin-bottom: 20px;
-}
-.image3 {
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-.system {
-    display: none;
-}
-
-
-</style>
-<style>
-.comment-section {
-    margin-top: 12px;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-}
-.comment-list { margin-bottom: 8px; }
-.comment-item {
-    background: #f9f9f9;
-    border: 1px solid #eee;
-    padding: 6px 8px;
-    margin-bottom: 6px;
-    border-radius: 4px;
-}
-.comment-input {
-    width: 100%;
-    min-height: 48px;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 6px;
-}
-.comment-submit {
-    padding: 6px 10px;
-    font-size: 14px;
-}
-</style>
-</head>
-
-<body>
-
-<h1>Research Notes</h1>
-
-<button onclick="toggleSection('content1')">(1)</button>
-
-<div id="content1" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PKS0552-640_4.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys4_comp1_PKS0552-640.dat.jpeg" class="image2">
-
-        <img src="model2_sys4_comp2_PKS0552-640.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PKS0552-640_4.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-
-<button onclick="toggleSection('content2')">(2)</button>
-
-<div id="content2" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PKS0552-640_3.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys3_comp1_PKS0552-640.dat.jpeg" class="image2">
-
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PKS0552-640_3.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content3')">(3)</button>
-
-<div id="content3" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PKS0552-640_5.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys5_comp3_PKS0552-640.dat.jpeg" class="image2">
-
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PKS0552-640_5.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content4')">(4)</button>
-
-<div id="content4" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PKS0552-640_6.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys6_comp2_PKS0552-640.dat.jpeg" class="image2">
-        <img src="model2_sys6_comp3_PKS0552-640.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PKS0552-640_6.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content5')">(5)</button>
-
-<div id="content5" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_7.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys7_comp5_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys7_comp6_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys7_comp7_3C57.dat.jpeg" class="image2">        
-        <img src="model2_sys7_comp10_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys7_comp11_3C57.dat.jpeg" class="image2">        
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_7.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content6')">(6)</button>
-
-<div id="content6" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_8.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <!--<img src="model2_sys8_comp2_3C57.dat_2phase.jpg" class="image2">-->
-        <img src="model2_sys8_comp2_3C57.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_8.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content7')">(7)</button>
-
-<div id="content7" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_9.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys9_comp1_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys9_comp1_3C57.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_9.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-
-<button onclick="toggleSection('content8')">(8)</button>
-
-<div id="content8" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_10.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys10_comp1_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys10_comp2_3C57.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_10.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content9')">(9)</button>
-
-<div id="content9" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_11.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys11_comp1_3C57.dat.jpeg" class="image2">
-
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_11.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content10')">(10)</button>
-
-<div id="content10" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="3C57_12.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys12_comp2_3C57.dat.jpeg" class="image2">
-        <img src="model2_sys12_comp2_3C57.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_3C57_12.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content11')">(11)</button>
-
-<div id="content11" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0153-4520_13.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys13_comp1_HE0153-4520.dat.jpeg" class="image2">
-        <img src="model2_sys13_comp3_HE0153-4520.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0153-4520_13.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content12')">(12)</button>
-
-<div id="content12" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0153-4520_14.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys14_comp2_HE0153-4520.dat.jpeg" class="image2">
-        <img src="model2_sys14_comp2_HE0153-4520.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0153-4520_14.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content13')">(13)</button>
-
-<div id="content13" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0238-1904_15.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys15_comp1_HE0238-1904.dat.jpeg" class="image2">
-        <img src="model2_sys15_comp2_HE0238-1904.dat.jpeg" class="image2">
-        <img src="model2_sys15_comp3_HE0238-1904.dat.jpeg" class="image2">
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0238-1904_15.jpeg" class="image3">
-
-    </div>
-    
-</div>
-
-<button onclick="toggleSection('content14')">(14)</button>
-
-<div id="content14" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0439-5254_16.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys16_comp1_HE0439-5254.dat.jpeg" class="image2">
-        <img src="model2_sys16_comp2_HE0439-5254.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0439-5254_16.jpeg" class="image3">
-
-    </div>
-
-
-</div>
-
-<button onclick="toggleSection('content15')">(15)</button>
-
-<div id="content15" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0439-5254_17.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys17_comp1_HE0439-5254.dat.jpeg" class="image2">
-        <img src="model2_sys17_comp2_HE0439-5254.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0439-5254_17.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content16')">(16)</button>
-
-<div id="content16" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0439-5254_18.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys18_comp1_HE0439-5254.dat.jpeg" class="image2">
-        <img src="model2_sys18_comp2_HE0439-5254.dat.jpeg" class="image2">
-        <img src="model2_sys18_comp4_HE0439-5254.dat.jpeg" class="image2">
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE0439-5254_18.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content17')">(17)</button>
-
-<div id="content17" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE1003+0149_19.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-        <img src="model2_sys19_comp1_HE1003+0149.dat.jpeg" class="image2">
-        <img src="model2_sys19_comp3_HE1003+0149.dat.jpeg" class="image2">
-        <img src="model2_sys19_comp4_HE1003+0149.dat.jpeg" class="image2">
-        <img src="model2_sys19_comp6_HE1003+0149.dat.jpeg" class="image2">
-        <img src="model2_sys19_comp7_HE1003+0149.dat.jpeg" class="image2">
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_HE1003+0149_19.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content18')">(18)</button>
-
-<div id="content18" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PB6291_20.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys20_comp1_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys20_comp2_PB6291.dat.jpeg" class="image2">
-
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PB6291_20.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content19')">(19)</button>
-
-<div id="content19" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PB6291_21.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys21_comp2_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys21_comp2_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys21_comp3_PB6291.dat.jpeg" class="image2">
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PB6291_21.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-
-<button onclick="toggleSection('content20')">(20)</button>
-
-<div id="content20" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PB6291_22.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys22_comp1_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys22_comp2_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys22_comp3_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys22_comp4_PB6291.dat.jpeg" class="image2">        
-        <img src="model2_sys22_comp4_PB6291.dat.jpeg" class="image2">       
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-
-        <img src="corner_PB6291_22.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content21')">(21)</button>
-
-<div id="content21" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PB6291_23.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys23_comp2_PB6291.dat.jpeg" class="image2">
-        <img src="model2_sys23_comp2_PB6291.dat_2phase.jpg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_PB6291_23.jpeg" class="image3">
-        <img src="corner_PB6291_23_2phase.jpeg" class="image3">
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content22')">(22)</button>
-
-<div id="content22" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PB6291_24.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys24_comp1_PB6291.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_PB6291_24.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content23')">(23)</button>
-
-<div id="content23" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PG1522+101_25.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys25_comp1_PG1522+101.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_PG1522+101_25.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content24')">(24)</button>
-
-<div id="content24" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PG1522+101_26.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys26_comp3_PG1522+101.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_PG1522+101_26.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content25')">(25)</button>
-
-<div id="content25" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PG1522+101_27.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys27_comp1_PG1522+101.dat.jpeg" class="image2">
-        <img src="model2_sys27_comp2_PG1522+101.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_PG1522+101_27.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content26')">(26)</button>
-
-<div id="content26" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q0107-0235_29.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys29_comp1_Q0107-0235.dat_2phase.jpg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q0107-0235_29_2phase.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content27')">(27)</button>
-
-<div id="content27" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q0107-0235_30.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys30_comp1_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys30_comp2_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys30_comp3_Q0107-0235.dat.jpeg" class="image2">
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q0107-0235_30.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content28')">(28)</button>
-
-<div id="content28" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q0107-0235_31.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys31_comp3_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys31_comp4_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys31_comp5_Q0107-0235.dat.jpeg" class="image2">
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q0107-0235_31.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content29')">(29)</button>
-
-<div id="content29" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q0107-0235_33.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys33_comp2_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys33_comp2_Q0107-0235.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q0107-0235_33.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content30')">(30)</button>
-
-<div id="content30" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q0107-0235_34.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys34_comp1_Q0107-0235.dat.jpeg" class="image2">
-        <img src="model2_sys34_comp2_Q0107-0235.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q0107-0235_34.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content31')">(31)</button>
-
-<div id="content31" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1354+048_35.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys35_comp1_Q1354+048.dat.jpeg" class="image2">
-        <img src="model2_sys35_comp2_Q1354+048.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q1354+048_35.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content32')">(32)</button>
-
-<div id="content32" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1354+048_36.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys36_comp1_Q1354+048.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q1354+048_36.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content33')">(33)</button>
-
-<div id="content33" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1354+048_37.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys37_comp1_Q1354+048.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q1354+048_37.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content34')">(34)</button>
-
-<div id="content34" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1435-0134_42.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys42_comp3_Q1435-0134.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q1435-0134_42.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-<button onclick="toggleSection('content35')">(35)</button>
-
-<div id="content35" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="RXSJ02282-4057_44.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys44_comp1_RXSJ02282-4057.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_RXSJ02282-4057_44.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content36')">(36)</button>
-
-<div id="content36" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="TEX0206-048_45.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys45_comp3_TEX0206-048.dat.jpeg" class="image2">
-        <img src="model2_sys45_comp2_TEX0206-048.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner2_TEX0206-048_45.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content37')">(37)</button>
-
-<div id="content37" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1354+048_38.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-
-        <img src="model2_sys38_comp1_Q1354+048.dat_2phase.jpg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-
-        <img src="corner_Q1354+048_38_2phase.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-
-<button onclick="toggleSection('content38')">(38)</button>
-
-<div id="content38" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-        <img src="PKS0232-04_46.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-        <img src="model2_sys46_comp1_PKS0232-04.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-        <img src="corner_PKS0232-04_46.jpeg" class="image3"> 
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content39')">(39)</button>
-
-<div id="content39" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="PG1522+101_28.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-        <img src="model2_sys28_comp1_PG1522+101.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-        <img src="corner_PG1522+101_28.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<button onclick="toggleSection('content40')">(40)</button>
-
-<div id="content40" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="HE0439-5254_47.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-        <img src="model2_sys47_comp1_HE0439-5254.dat.jpeg" class="image2">
-
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-        <img src="corner_HE0439-5254_47.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-<button onclick="toggleSection('content41')">(41)</button>
-
-<div id="content41" class="system">
-
-    <!-- Panel 1 -->
-    <div class="panel">
-
-        <h2>Panel 1</h2>
-
-        <img src="Q1435-0134_1.jpeg" class="image1">
-
-
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="panel">
-
-        <h2>Panel 2</h2>
-        <img src="model2_sys1_comp1_Q1435-0134.dat.jpeg" class="image2">
-        <img src="model2_sys1_comp3_Q1435-0134.dat.jpeg" class="image2">
-        <img src="model2_sys1_comp4_Q1435-0134.dat.jpeg" class="image2">
-
-        
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="panel">
-
-        <h2>Panel 3</h2>
-        <img src="corner_Q1435-0134_1.jpeg" class="image3">
-
-    </div>
-
-</div>
-
-
-
-<script>
-function toggleSection(id) {
-    const x = document.getElementById(id);
-
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-// Comment UI: attach a comment area to every .panel and persist to localStorage
-document.addEventListener('DOMContentLoaded', () => {
-    const panels = Array.from(document.querySelectorAll('.panel'));
-    panels.forEach((panel, idx) => {
-        if (!panel.id) panel.id = 'panel-' + (idx + 1);
-        const id = panel.id;
-
-        // create comment section
-        const cs = document.createElement('div');
-        cs.className = 'comment-section';
-        cs.innerHTML = `
-            <h3>Comments</h3>
-            <div class="comment-list" data-for="${id}"></div>
-            <textarea class="comment-input" placeholder="Add a comment"></textarea>
-            <button class="comment-submit">Post</button>
-        `;
-        panel.appendChild(cs);
-    });
-
-    function storageKey(id) { return location.pathname + '::' + id + '::comments'; }
-    function loadComments(id) {
-        try { return JSON.parse(localStorage.getItem(storageKey(id))) || []; } catch(e) { return []; }
-    }
-    function saveComments(id, arr) { localStorage.setItem(storageKey(id), JSON.stringify(arr)); }
-
-    panels.forEach(panel => {
-        const id = panel.id;
-        const list = panel.querySelector('.comment-list');
-        const input = panel.querySelector('.comment-input');
-        const btn = panel.querySelector('.comment-submit');
-
-        function render() {
-            const comments = loadComments(id);
-            list.innerHTML = '';
-            comments.forEach(c => {
-                const d = document.createElement('div');
-                d.className = 'comment-item';
-                d.textContent = c;
-                list.appendChild(d);
-            });
-        }
-
-        btn.addEventListener('click', () => {
-            const v = input.value.trim();
-            if (!v) return;
-            const comments = loadComments(id);
-            comments.push(v);
-            saveComments(id, comments);
-            input.value = '';
-            render();
-        });
-
-        render();
-    });
-});
-</script>
-
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KS19 absorber models</title><style>body{font-family:system-ui,sans-serif;margin:16px;max-width:1300px;color:#1a1a1a}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ddd;padding:6px;vertical-align:top;font-size:13px}img{width:300px;border:1px solid #eee}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}.gal{display:flex;flex-direction:column;gap:6px}h2{margin-top:36px}.lim{color:#a33}</style></head><body>
+<h1>MUSEQuBES CGM absorbers: KS19 photoionization models</h1>
+<p>One velocity plot per absorber system, with (right) the HST image of the host galaxy (smallest D/R<sub>vir</sub> within ±500 km/s; north up, east left; arrow: direction to the QSO; D = impact parameter) and the MUSE white-light image (host circled in yellow, other members of its group in cyan squares, QSO star); for each modelled component its corner plot and ionization-model fit (observed vs model columns, residuals below). Click an image for full size. Metallicity flags: detection, <span class='lim'>upper limit</span>. Data: <a href='catalogue.csv'>catalogue.csv</a>.</p>
+<h2 id='final_results'>Final results</h2>
+<h3>[X/H] vs galaxy D/Rvir, stellar mass, SFR and sSFR (all galaxy–absorber pairs)</h3><p><a href='final_results/XH_pairs_props.png'><img src='final_results/XH_pairs_props.png' style='width:100%;max-width:1250px'></a></p><p style='font-size:13px;max-width:1250px'>Every KS19 component plotted against every galaxy within ±500 km/s of its absorber (top: all pairs; bottom: galaxies with D/Rvir < 1). [X/H] = [α/H] (circles) where an α-element ion is detected, [C/H] (squares) for carbon-only components; posterior median and 16–84%; hollow = upper limit (95th percentile). Prominent points: the component's smallest-D/Rvir host galaxy; faint: other paired galaxies. Leftward arrows: SFR upper limits. Censored Kendall τ (upper limits in [X/H]): host only, p from permuting host properties among hosts; all pairs, p_block from permuting galaxy sets among absorbers. Abundance-parameterised KS19 models (independent flat priors on [α/H], [C/H], [N/H]). &nbsp;[<a href='final_results/XH_pairs_props.pdf'>PDF</a> · <a href='final_results/XH_pairs_props_stats.csv'>data</a>]</p>
+<h3>[X/H], [C/α] and [N/α] vs host azimuthal angle (left: all; right: D/Rvir < 1)</h3><p><a href='final_results/azimuth_XH_CA_NA.png'><img src='final_results/azimuth_XH_CA_NA.png' style='width:100%;max-width:1250px'></a></p><p style='font-size:13px;max-width:1250px'>KS19 components vs the azimuthal angle Φ of their host (smallest-D/Rvir galaxy within ±500 km/s) measured from HST Sérsic fits (0 = major, 90 = minor axis); good sample: HST position offset < 1″, resolved, inclination > 40°. Left column: all hosts; right: D/Rvir < 1. Top: [X/H] = [α/H] where an α-element ion is detected, [C/H] (red squares) for carbon-only components; middle: [C/α]; bottom: [N/α]; unconstrained values excluded. Points: posterior median and 16–84% (Φ: 16–84% of the morphology posterior); ▼/▲ upper (95th percentile) / lower (5th percentile) limits; colour: D/Rvir. Survival analysis: red line and band = Turnbull NPMLE median per 30° bin with 68% range from Monte Carlo over the Φ and KS19 posteriors plus a host bootstrap; censored Kendall τ (two-sided censoring) with p from permuting Φ among hosts; minor − major = difference of the 60–90° and 0–30° medians. Abundance-parameterised KS19 models. Statistics per panel (τ, p, bin medians, minor − major) are in the data file. &nbsp;[<a href='final_results/azimuth_XH_CA_NA.pdf'>PDF</a> · <a href='final_results/azimuth_XH_CA_NA_stats.csv'>data</a>]</p>
+<h3>[C/α] and [N/α] vs [α/H] of the KS19 components</h3><p><a href='final_results/aH_vs_ratios.png'><img src='final_results/aH_vs_ratios.png' style='width:100%;max-width:1250px'></a></p><p style='font-size:13px;max-width:1250px'>All KS19 components (abundance-parameterised posteriors: independent flat priors on [α/H], [C/H], [N/H]). Filled circles: both quantities constrained (posterior median and 16–84%); ▼: ratio upper limit (95th percentile) with [α/H] constrained; hollow circles with arrows: [α/H] upper limit (95th percentile) and ratio lower limit (5th percentile) — these components are measured in [C/H] only, so they move along slope −1 in this plane. Unconstrained ratios are not shown (16 in [C/α]; in [N/α] all 37 components with an [α/H] upper limit). Colour: azimuthal-angle bin of the host (smallest-D/Rvir galaxy; HST good sample with inclination > 40°): blue Φ = 0–30° (major axis), amber 30–60°, red 60–90° (minor axis); grey: no reliable Φ. Dashed lines: solar. Kendall τ for components with both quantities constrained is in the data file ([C/α]: 40 components; [N/α]: 13); since [X/α] = [X/H] − [α/H], measurement errors anticorrelate the two axes. &nbsp;[<a href='final_results/aH_vs_ratios.pdf'>PDF</a> · <a href='final_results/aH_vs_ratios_stats.csv'>data</a>]</p>
+<h2>Absorber systems</h2>
+<h2 id='3C57_sys7'>3C57 &nbsp;sys 7</h2>
+<div class='row'><a href='velocity_plots/3C57_sys7_vplot.png'><img src='velocity_plots/3C57_sys7_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys7_hst.png'><img src='galaxy_images/3C57_sys7_hst.png' style='width:430px;border:none'></a><a href='galaxy_images/3C57_sys7_muse.png'><img src='galaxy_images/3C57_sys7_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.32253<br>15.34 ± 0.19</td><td>log n = -2.11<br><span class='lim'>[α/H] = -1.61 <sup>+1.15</sup><sub>−0.96</sub> (upper limit)</span><br>[C/H] = -1.95 (upper limit)<br>[N/H] = -1.48 (upper limit)<br><i>[C/α] = -0.25 (unconstrained), [N/α] = +0.13 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp2_corner.png'><img src='corner/3C57_sys7_comp2_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp2_model.png'><img src='ionization_models/3C57_sys7_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.32263<br>15.42 ± 0.15</td><td>log n = -2.10<br><span class='lim'>[α/H] = -1.64 <sup>+1.11</sup><sub>−0.90</sub> (upper limit)</span><br>[C/H] = -1.97 (upper limit)<br>[N/H] = -1.48 (upper limit)<br><i>[C/α] = -0.28 (unconstrained), [N/α] = +0.12 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp3_corner.png'><img src='corner/3C57_sys7_comp3_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp3_model.png'><img src='ionization_models/3C57_sys7_comp3_model.png'></a></td></tr>
+<tr><td>5</td><td>0.32305<br>15.50 ± 0.02</td><td>log n = -2.15<br><span class='lim'>[α/H] = -1.78 <sup>+0.83</sup><sub>−0.84</sub> (upper limit)</span><br>[C/H] = +0.16 (detection)<br>[N/H] = -1.54 (upper limit)<br><i>[C/α] = +1.94 (lower limit), [N/α] = +0.20 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp5_corner.png'><img src='corner/3C57_sys7_comp5_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp5_model.png'><img src='ionization_models/3C57_sys7_comp5_model.png'></a></td></tr>
+<tr><td>6</td><td>0.32339<br>15.97 ± 0.03</td><td>log n = -2.25<br><span class='lim'>[α/H] = -1.90 <sup>+0.80</sup><sub>−0.74</sub> (upper limit)</span><br>[C/H] = +0.03 (detection)<br>[N/H] = -0.99 (unconstrained)<br><i>[C/α] = +1.93 (lower limit), [N/α] = +0.90 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp6_corner.png'><img src='corner/3C57_sys7_comp6_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp6_model.png'><img src='ionization_models/3C57_sys7_comp6_model.png'></a></td></tr>
+<tr><td>7</td><td>0.32355<br>15.45 ± 0.03</td><td>log n = -2.04<br><span class='lim'>[α/H] = -1.59 <sup>+0.92</sup><sub>−0.94</sub> (upper limit)</span><br>[C/H] = +0.48 (detection)<br>[N/H] = -0.94 (unconstrained)<br><i>[C/α] = +2.06 (lower limit), [N/α] = +0.64 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp7_corner.png'><img src='corner/3C57_sys7_comp7_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp7_model.png'><img src='ionization_models/3C57_sys7_comp7_model.png'></a></td></tr>
+<tr><td>10</td><td>0.32437<br>15.05 ± 0.07</td><td>log n = -3.46<br><span>[α/H] = -0.08 <sup>+0.45</sup><sub>−0.30</sub> (detection)</span><br>[C/H] = -0.74 (detection)<br>[N/H] = -1.04 (unconstrained)<br><i>[C/α] = -0.70 (detection), [N/α] = -0.99 (unconstrained)</i></td><td><a href='corner/3C57_sys7_comp10_corner.png'><img src='corner/3C57_sys7_comp10_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp10_model.png'><img src='ionization_models/3C57_sys7_comp10_model.png'></a></td></tr>
+<tr><td>11</td><td>0.32455<br>15.85 ± 0.02</td><td>log n = -3.74<br><span>[α/H] = +0.05 <sup>+0.59</sup><sub>−0.45</sub> (detection)</span><br>[C/H] = -0.01 (detection)<br>[N/H] = -1.38 (upper limit)<br><i>[C/α] = -0.07 (detection), [N/α] = -1.43 (upper limit)</i></td><td><a href='corner/3C57_sys7_comp11_corner.png'><img src='corner/3C57_sys7_comp11_corner.png'></a></td><td><a href='ionization_models/3C57_sys7_comp11_model.png'><img src='ionization_models/3C57_sys7_comp11_model.png'></a></td></tr>
+</table>
+<h2 id='3C57_sys8'>3C57 &nbsp;sys 8</h2>
+<div class='row'><a href='velocity_plots/3C57_sys8_vplot.png'><img src='velocity_plots/3C57_sys8_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys8_hst.png'><img src='galaxy_images/3C57_sys8_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/3C57_sys8_muse.png'><img src='galaxy_images/3C57_sys8_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.32825<br>15.80 ± 0.02</td><td>log n = -3.79<br><span>[α/H] = -0.11 <sup>+0.10</sup><sub>−0.10</sub> (detection)</span><br>[C/H] = +0.23 (detection)<br>[N/H] = -0.62 (detection)<br><i>[C/α] = +0.34 (detection), [N/α] = -0.51 (detection)</i></td><td><a href='corner/3C57_sys8_comp2_corner.png'><img src='corner/3C57_sys8_comp2_corner.png'></a></td><td><a href='ionization_models/3C57_sys8_comp2_model.png'><img src='ionization_models/3C57_sys8_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='3C57_sys9'>3C57 &nbsp;sys 9</h2>
+<div class='row'><a href='velocity_plots/3C57_sys9_vplot.png'><img src='velocity_plots/3C57_sys9_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys9_hst.png'><img src='galaxy_images/3C57_sys9_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/3C57_sys9_muse.png'><img src='galaxy_images/3C57_sys9_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.38342<br>14.80 ± 0.01</td><td>log n = -3.10<br><span class='lim'>[α/H] = -1.69 <sup>+1.04</sup><sub>−0.92</sub> (upper limit)</span><br>[C/H] = -1.22 (detection)<br>[N/H] = -1.62 (upper limit)<br><i>[C/α] = +0.55 (lower limit), [N/α] = +0.15 (unconstrained)</i></td><td><a href='corner/3C57_sys9_comp1_corner.png'><img src='corner/3C57_sys9_comp1_corner.png'></a></td><td><a href='ionization_models/3C57_sys9_comp1_model.png'><img src='ionization_models/3C57_sys9_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='3C57_sys10'>3C57 &nbsp;sys 10</h2>
+<div class='row'><a href='velocity_plots/3C57_sys10_vplot.png'><img src='velocity_plots/3C57_sys10_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys10_hst.png'><img src='galaxy_images/3C57_sys10_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/3C57_sys10_muse.png'><img src='galaxy_images/3C57_sys10_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.24985<br>15.53 ± 0.02</td><td>log n = -3.62<br><span>[α/H] = -0.85 <sup>+0.87</sup><sub>−0.21</sub> (detection)</span><br>[C/H] = -1.18 (detection)<br>[N/H] = -1.32 (upper limit)<br><i>[C/α] = -0.34 (detection), [N/α] = -0.65 (upper limit)</i></td><td><a href='corner/3C57_sys10_comp1_corner.png'><img src='corner/3C57_sys10_comp1_corner.png'></a></td><td><a href='ionization_models/3C57_sys10_comp1_model.png'><img src='ionization_models/3C57_sys10_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.25017<br>15.22 ± 0.02</td><td>log n = -3.56<br><span>[α/H] = -0.25 <sup>+0.49</sup><sub>−0.13</sub> (detection)</span><br>[C/H] = -0.83 (detection)<br>[N/H] = -1.20 (upper limit)<br><i>[C/α] = -0.56 (detection), [N/α] = -1.08 (upper limit)</i></td><td><a href='corner/3C57_sys10_comp2_corner.png'><img src='corner/3C57_sys10_comp2_corner.png'></a></td><td><a href='ionization_models/3C57_sys10_comp2_model.png'><img src='ionization_models/3C57_sys10_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='3C57_sys11'>3C57 &nbsp;sys 11</h2>
+<div class='row'><a href='velocity_plots/3C57_sys11_vplot.png'><img src='velocity_plots/3C57_sys11_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys11_hst.png'><img src='galaxy_images/3C57_sys11_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/3C57_sys11_muse.png'><img src='galaxy_images/3C57_sys11_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.53325<br>14.37 ± 0.03</td><td>log n = -3.85<br><span>[α/H] = +0.00 <sup>+0.05</sup><sub>−0.05</sub> (detection)</span><br>[C/H] = -0.21 (detection)<br>[N/H] = -1.55 (upper limit)<br><i>[C/α] = -0.21 (detection), [N/α] = -1.56 (upper limit)</i></td><td><a href='corner/3C57_sys11_comp1_corner.png'><img src='corner/3C57_sys11_comp1_corner.png'></a></td><td><a href='ionization_models/3C57_sys11_comp1_model.png'><img src='ionization_models/3C57_sys11_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='3C57_sys12'>3C57 &nbsp;sys 12</h2>
+<div class='row'><a href='velocity_plots/3C57_sys12_vplot.png'><img src='velocity_plots/3C57_sys12_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/3C57_sys12_hst.png'><img src='galaxy_images/3C57_sys12_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/3C57_sys12_muse.png'><img src='galaxy_images/3C57_sys12_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.43184<br>13.66 ± 0.08</td><td>log n = -4.36<br><span>[α/H] = -0.48 <sup>+0.53</sup><sub>−0.48</sub> (detection)</span><br>[C/H] = +0.15 (detection)<br>[N/H] = -1.52 (upper limit)<br><i>[C/α] = +0.58 (detection), [N/α] = -1.02 (upper limit)</i></td><td><a href='corner/3C57_sys12_comp2_corner.png'><img src='corner/3C57_sys12_comp2_corner.png'></a></td><td><a href='ionization_models/3C57_sys12_comp2_model.png'><img src='ionization_models/3C57_sys12_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='HE0153-4520_sys13'>HE0153-4520 &nbsp;sys 13</h2>
+<div class='row'><a href='velocity_plots/HE0153-4520_sys13_vplot.png'><img src='velocity_plots/HE0153-4520_sys13_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0153-4520_sys13_hst.png'><img src='galaxy_images/HE0153-4520_sys13_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0153-4520_sys13_muse.png'><img src='galaxy_images/HE0153-4520_sys13_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.22589<br>16.96 ± 0.31</td><td>log n = -3.28<br><span>[α/H] = -1.16 <sup>+0.25</sup><sub>−0.25</sub> (detection)</span><br>[C/H] = -1.03 (detection)<br>[N/H] = -1.05 (detection)<br><i>[C/α] = +0.15 (detection), [N/α] = +0.12 (detection)</i></td><td><a href='corner/HE0153-4520_sys13_comp1_corner.png'><img src='corner/HE0153-4520_sys13_comp1_corner.png'></a></td><td><a href='ionization_models/HE0153-4520_sys13_comp1_model.png'><img src='ionization_models/HE0153-4520_sys13_comp1_model.png'></a></td></tr>
+<tr><td>3</td><td>0.22607<br>15.64 ± 0.14</td><td>log n = -3.56<br><span>[α/H] = -0.13 <sup>+0.45</sup><sub>−0.40</sub> (detection)</span><br>[C/H] = -0.08 (detection)<br>[N/H] = -1.02 (unconstrained)<br><i>[C/α] = +0.09 (detection), [N/α] = -0.89 (unconstrained)</i></td><td><a href='corner/HE0153-4520_sys13_comp3_corner.png'><img src='corner/HE0153-4520_sys13_comp3_corner.png'></a></td><td><a href='ionization_models/HE0153-4520_sys13_comp3_model.png'><img src='ionization_models/HE0153-4520_sys13_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='HE0153-4520_sys14'>HE0153-4520 &nbsp;sys 14</h2>
+<div class='row'><a href='velocity_plots/HE0153-4520_sys14_vplot.png'><img src='velocity_plots/HE0153-4520_sys14_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0153-4520_sys14_hst.png'><img src='galaxy_images/HE0153-4520_sys14_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0153-4520_sys14_muse.png'><img src='galaxy_images/HE0153-4520_sys14_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.40025<br>14.26 ± 0.02</td><td>log n = -4.41<br><span>[α/H] = -0.39 <sup>+0.44</sup><sub>−0.43</sub> (detection)</span><br>[C/H] = -0.37 (detection)<br>[N/H] = -0.42 (detection)<br><i>[C/α] = -0.04 (detection), [N/α] = -0.04 (detection)</i></td><td><a href='corner/HE0153-4520_sys14_comp1_corner.png'><img src='corner/HE0153-4520_sys14_comp1_corner.png'></a></td><td><a href='ionization_models/HE0153-4520_sys14_comp1_model.png'><img src='ionization_models/HE0153-4520_sys14_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.40055<br>14.35 ± 0.03</td><td>log n = -3.48<br><span class='lim'>[α/H] = -1.38 <sup>+1.10</sup><sub>−1.08</sub> (upper limit)</span><br>[C/H] = -0.56 (detection)<br>[N/H] = -1.57 (upper limit)<br><i>[C/α] = +0.80 (lower limit), [N/α] = -0.18 (unconstrained)</i></td><td><a href='corner/HE0153-4520_sys14_comp2_corner.png'><img src='corner/HE0153-4520_sys14_comp2_corner.png'></a></td><td><a href='ionization_models/HE0153-4520_sys14_comp2_model.png'><img src='ionization_models/HE0153-4520_sys14_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='HE0153-4520_sys51'>HE0153-4520 &nbsp;sys 51</h2>
+<div class='row'><a href='velocity_plots/HE0153-4520_sys51_vplot.png'><img src='velocity_plots/HE0153-4520_sys51_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0153-4520_sys51_hst.png'><img src='galaxy_images/HE0153-4520_sys51_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0153-4520_sys51_muse.png'><img src='galaxy_images/HE0153-4520_sys51_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.22220<br>15.04 ± 0.02</td><td>log n = -2.62<br><span class='lim'>[α/H] = -1.85 <sup>+1.14</sup><sub>−0.80</sub> (upper limit)</span><br>[C/H] = -1.47 (upper limit)<br>[N/H] = -1.76 (upper limit)<br><i>[C/α] = +0.30 (unconstrained), [N/α] = +0.14 (unconstrained)</i></td><td><a href='corner/HE0153-4520_sys51_comp2_corner.png'><img src='corner/HE0153-4520_sys51_comp2_corner.png'></a></td><td><a href='ionization_models/HE0153-4520_sys51_comp2_model.png'><img src='ionization_models/HE0153-4520_sys51_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='HE0238-1904_sys15'>HE0238-1904 &nbsp;sys 15</h2>
+<div class='row'><a href='velocity_plots/HE0238-1904_sys15_vplot.png'><img src='velocity_plots/HE0238-1904_sys15_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0238-1904_sys15_hst.png'><img src='galaxy_images/HE0238-1904_sys15_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0238-1904_sys15_muse.png'><img src='galaxy_images/HE0238-1904_sys15_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.42388<br>14.32 ± 0.31</td><td>log n = -3.90<br><span>[α/H] = +0.10 <sup>+0.50</sup><sub>−0.37</sub> (detection)</span><br>[C/H] = -0.21 (detection)<br>[N/H] = -1.51 (upper limit)<br><i>[C/α] = -0.33 (detection), [N/α] = -1.59 (upper limit)</i></td><td><a href='corner/HE0238-1904_sys15_comp1_corner.png'><img src='corner/HE0238-1904_sys15_comp1_corner.png'></a></td><td><a href='ionization_models/HE0238-1904_sys15_comp1_model.png'><img src='ionization_models/HE0238-1904_sys15_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.42401<br>14.44 ± 0.24</td><td>log n = -4.13<br><span>[α/H] = +0.42 <sup>+0.31</sup><sub>−0.27</sub> (detection)</span><br>[C/H] = -0.07 (detection)<br>[N/H] = -1.58 (upper limit)<br><i>[C/α] = -0.49 (detection), [N/α] = -2.01 (upper limit)</i></td><td><a href='corner/HE0238-1904_sys15_comp2_corner.png'><img src='corner/HE0238-1904_sys15_comp2_corner.png'></a></td><td><a href='ionization_models/HE0238-1904_sys15_comp2_model.png'><img src='ionization_models/HE0238-1904_sys15_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.42429<br>14.61 ± 0.02</td><td>log n = -4.20<br><span>[α/H] = +0.30 <sup>+0.39</sup><sub>−0.21</sub> (detection)</span><br>[C/H] = -0.14 (detection)<br>[N/H] = -1.62 (upper limit)<br><i>[C/α] = -0.46 (detection), [N/α] = -1.97 (upper limit)</i></td><td><a href='corner/HE0238-1904_sys15_comp3_corner.png'><img src='corner/HE0238-1904_sys15_comp3_corner.png'></a></td><td><a href='ionization_models/HE0238-1904_sys15_comp3_model.png'><img src='ionization_models/HE0238-1904_sys15_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='HE0439-5254_sys16'>HE0439-5254 &nbsp;sys 16</h2>
+<div class='row'><a href='velocity_plots/HE0439-5254_sys16_vplot.png'><img src='velocity_plots/HE0439-5254_sys16_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0439-5254_sys16_hst.png'><img src='galaxy_images/HE0439-5254_sys16_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0439-5254_sys16_muse.png'><img src='galaxy_images/HE0439-5254_sys16_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.30823<br>14.30 ± 0.07</td><td>log n = -3.37<br><span class='lim'>[α/H] = -1.21 <sup>+1.33</sup><sub>−1.23</sub> (upper limit)</span><br>[C/H] = -0.43 (detection)<br>[N/H] = -1.42 (upper limit)<br><i>[C/α] = +0.81 (lower limit), [N/α] = -0.22 (unconstrained)</i></td><td><a href='corner/HE0439-5254_sys16_comp1_corner.png'><img src='corner/HE0439-5254_sys16_comp1_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys16_comp1_model.png'><img src='ionization_models/HE0439-5254_sys16_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='HE0439-5254_sys17'>HE0439-5254 &nbsp;sys 17</h2>
+<div class='row'><a href='velocity_plots/HE0439-5254_sys17_vplot.png'><img src='velocity_plots/HE0439-5254_sys17_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0439-5254_sys17_hst.png'><img src='galaxy_images/HE0439-5254_sys17_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0439-5254_sys17_muse.png'><img src='galaxy_images/HE0439-5254_sys17_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.60168<br>14.76 ± 0.09</td><td>log n = -2.76<br><span class='lim'>[α/H] = -1.13 <sup>+1.22</sup><sub>−1.26</sub> (upper limit)</span><br>[C/H] = -0.89 (detection)<br>[N/H] = -1.83 (upper limit)<br><i>[C/α] = +0.29 (lower limit), [N/α] = -0.53 (unconstrained)</i></td><td><a href='corner/HE0439-5254_sys17_comp1_corner.png'><img src='corner/HE0439-5254_sys17_comp1_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys17_comp1_model.png'><img src='ionization_models/HE0439-5254_sys17_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.60196<br>14.32 ± 0.23</td><td>log n = -3.10<br><span class='lim'>[α/H] = -1.07 <sup>+1.31</sup><sub>−1.34</sub> (upper limit)</span><br>[C/H] = -0.00 (detection)<br>[N/H] = -1.77 (upper limit)<br><i>[C/α] = +1.00 (lower limit), [N/α] = -0.56 (unconstrained)</i></td><td><a href='corner/HE0439-5254_sys17_comp2_corner.png'><img src='corner/HE0439-5254_sys17_comp2_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys17_comp2_model.png'><img src='ionization_models/HE0439-5254_sys17_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='HE0439-5254_sys18'>HE0439-5254 &nbsp;sys 18</h2>
+<div class='row'><a href='velocity_plots/HE0439-5254_sys18_vplot.png'><img src='velocity_plots/HE0439-5254_sys18_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0439-5254_sys18_hst.png'><img src='galaxy_images/HE0439-5254_sys18_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0439-5254_sys18_muse.png'><img src='galaxy_images/HE0439-5254_sys18_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.61440<br>14.29 ± 0.06</td><td>log n = -3.14<br><span>[α/H] = +0.45 <sup>+0.16</sup><sub>−0.16</sub> (detection)</span><br>[C/H] = +0.34 (detection)<br>[N/H] = -1.18 (upper limit)<br><i>[C/α] = -0.11 (detection), [N/α] = -1.61 (upper limit)</i></td><td><a href='corner/HE0439-5254_sys18_comp1_corner.png'><img src='corner/HE0439-5254_sys18_comp1_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys18_comp1_model.png'><img src='ionization_models/HE0439-5254_sys18_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.61495<br>16.28 ± 0.05</td><td>log n = -3.06<br><span>[α/H] = +0.31 <sup>+0.07</sup><sub>−0.07</sub> (detection)</span><br>[C/H] = -0.00 (detection)<br>[N/H] = -0.31 (detection)<br><i>[C/α] = -0.31 (detection), [N/α] = -0.62 (detection)</i></td><td><a href='corner/HE0439-5254_sys18_comp2_corner.png'><img src='corner/HE0439-5254_sys18_comp2_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys18_comp2_model.png'><img src='ionization_models/HE0439-5254_sys18_comp2_model.png'></a></td></tr>
+<tr><td>4</td><td>0.61570<br>15.75 ± 0.04</td><td>log n = -2.91<br><span>[α/H] = +0.05 <sup>+0.15</sup><sub>−0.13</sub> (detection)</span><br>[C/H] = -0.19 (detection)<br>[N/H] = -1.08 (unconstrained)<br><i>[C/α] = -0.24 (detection), [N/α] = -1.13 (unconstrained)</i></td><td><a href='corner/HE0439-5254_sys18_comp4_corner.png'><img src='corner/HE0439-5254_sys18_comp4_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys18_comp4_model.png'><img src='ionization_models/HE0439-5254_sys18_comp4_model.png'></a></td></tr>
+</table>
+<h2 id='HE0439-5254_sys47'>HE0439-5254 &nbsp;sys 47</h2>
+<div class='row'><a href='velocity_plots/HE0439-5254_sys47_vplot.png'><img src='velocity_plots/HE0439-5254_sys47_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE0439-5254_sys47_hst.png'><img src='galaxy_images/HE0439-5254_sys47_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/HE0439-5254_sys47_muse.png'><img src='galaxy_images/HE0439-5254_sys47_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.57250<br>14.98 ± 0.02</td><td>log n = -3.38<br><span>[α/H] = -0.33 <sup>+0.08</sup><sub>−0.08</sub> (detection)</span><br>[C/H] = -0.92 (detection)<br>[N/H] = -1.10 (unconstrained)<br><i>[C/α] = -0.59 (detection), [N/α] = -0.76 (unconstrained)</i></td><td><a href='corner/HE0439-5254_sys47_comp1_corner.png'><img src='corner/HE0439-5254_sys47_comp1_corner.png'></a></td><td><a href='ionization_models/HE0439-5254_sys47_comp1_model.png'><img src='ionization_models/HE0439-5254_sys47_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='HE1003+0149_sys19'>HE1003+0149 &nbsp;sys 19</h2>
+<div class='row'><a href='velocity_plots/HE1003+0149_sys19_vplot.png'><img src='velocity_plots/HE1003+0149_sys19_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/HE1003+0149_sys19_hst.png'><img src='galaxy_images/HE1003+0149_sys19_hst.png' style='width:430px;border:none'></a><a href='galaxy_images/HE1003+0149_sys19_muse.png'><img src='galaxy_images/HE1003+0149_sys19_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.41759<br>14.77 ± 0.02</td><td>log n = -2.33<br><span class='lim'>[α/H] = -1.28 <sup>+1.39</sup><sub>−1.19</sub> (upper limit)</span><br>[C/H] = -1.99 (upper limit)<br>[N/H] = -1.24 (upper limit)<br><i>[C/α] = -0.57 (unconstrained), [N/α] = +0.05 (unconstrained)</i></td><td><a href='corner/HE1003+0149_sys19_comp1_corner.png'><img src='corner/HE1003+0149_sys19_comp1_corner.png'></a></td><td><a href='ionization_models/HE1003+0149_sys19_comp1_model.png'><img src='ionization_models/HE1003+0149_sys19_comp1_model.png'></a></td></tr>
+<tr><td>3</td><td>0.41832<br>15.62 ± 0.05</td><td>log n = -2.48<br><span class='lim'>[α/H] = -2.19 <sup>+0.67</sup><sub>−0.56</sub> (upper limit)</span><br>[C/H] = -1.40 (detection)<br>[N/H] = -1.35 (upper limit)<br><i>[C/α] = +0.66 (lower limit), [N/α] = +0.79 (unconstrained)</i></td><td><a href='corner/HE1003+0149_sys19_comp3_corner.png'><img src='corner/HE1003+0149_sys19_comp3_corner.png'></a></td><td><a href='ionization_models/HE1003+0149_sys19_comp3_model.png'><img src='ionization_models/HE1003+0149_sys19_comp3_model.png'></a></td></tr>
+<tr><td>4</td><td>0.41857<br>16.85 ± 0.03</td><td>log n = -2.22<br><span>[α/H] = -1.06 <sup>+0.05</sup><sub>−0.05</sub> (detection)</span><br>[C/H] = -0.91 (detection)<br>[N/H] = -2.20 (upper limit)<br><i>[C/α] = +0.15 (detection), [N/α] = -1.14 (upper limit)</i></td><td><a href='corner/HE1003+0149_sys19_comp4_corner.png'><img src='corner/HE1003+0149_sys19_comp4_corner.png'></a></td><td><a href='ionization_models/HE1003+0149_sys19_comp4_model.png'><img src='ionization_models/HE1003+0149_sys19_comp4_model.png'></a></td></tr>
+<tr><td>6</td><td>0.41961<br>15.46 ± 0.08</td><td>log n = -2.75<br><span class='lim'>[α/H] = -2.17 <sup>+0.66</sup><sub>−0.58</sub> (upper limit)</span><br>[C/H] = -1.32 (detection)<br>[N/H] = -1.47 (upper limit)<br><i>[C/α] = +0.75 (lower limit), [N/α] = +0.69 (unconstrained)</i></td><td><a href='corner/HE1003+0149_sys19_comp6_corner.png'><img src='corner/HE1003+0149_sys19_comp6_corner.png'></a></td><td><a href='ionization_models/HE1003+0149_sys19_comp6_model.png'><img src='ionization_models/HE1003+0149_sys19_comp6_model.png'></a></td></tr>
+<tr><td>7</td><td>0.41974<br>15.57 ± 0.04</td><td>log n = -1.84<br><span class='lim'>[α/H] = -1.79 <sup>+1.33</sup><sub>−0.83</sub> (upper limit)</span><br>[C/H] = -2.08 (upper limit)<br>[N/H] = -1.18 (upper limit)<br><i>[C/α] = -0.36 (unconstrained), [N/α] = +0.46 (unconstrained)</i></td><td><a href='corner/HE1003+0149_sys19_comp7_corner.png'><img src='corner/HE1003+0149_sys19_comp7_corner.png'></a></td><td><a href='ionization_models/HE1003+0149_sys19_comp7_model.png'><img src='ionization_models/HE1003+0149_sys19_comp7_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys20'>PB6291 &nbsp;sys 20</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys20_vplot.png'><img src='velocity_plots/PB6291_sys20_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys20_hst.png'><img src='galaxy_images/PB6291_sys20_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys20_muse.png'><img src='galaxy_images/PB6291_sys20_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.51702<br>14.21 ± 0.06</td><td>log n = -3.49<br><span>[α/H] = +0.45 <sup>+0.21</sup><sub>−0.21</sub> (detection)</span><br>[C/H] = -0.12 (detection)<br>[N/H] = -1.25 (upper limit)<br><i>[C/α] = -0.56 (detection), [N/α] = -1.68 (upper limit)</i></td><td><a href='corner/PB6291_sys20_comp1_corner.png'><img src='corner/PB6291_sys20_comp1_corner.png'></a></td><td><a href='ionization_models/PB6291_sys20_comp1_model.png'><img src='ionization_models/PB6291_sys20_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.51725<br>14.36 ± 0.06</td><td>log n = -3.87<br><span>[α/H] = +0.20 <sup>+0.14</sup><sub>−0.12</sub> (detection)</span><br>[C/H] = -0.09 (detection)<br>[N/H] = -1.46 (upper limit)<br><i>[C/α] = -0.29 (detection), [N/α] = -1.65 (upper limit)</i></td><td><a href='corner/PB6291_sys20_comp2_corner.png'><img src='corner/PB6291_sys20_comp2_corner.png'></a></td><td><a href='ionization_models/PB6291_sys20_comp2_model.png'><img src='ionization_models/PB6291_sys20_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys21'>PB6291 &nbsp;sys 21</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys21_vplot.png'><img src='velocity_plots/PB6291_sys21_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys21_hst.png'><img src='galaxy_images/PB6291_sys21_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys21_muse.png'><img src='galaxy_images/PB6291_sys21_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.71794<br>15.34 ± 0.05</td><td>log n = -2.52<br><span class='lim'>[α/H] = -1.88 <sup>+0.70</sup><sub>−0.77</sub> (upper limit)</span><br>[C/H] = -1.02 (detection)<br>[N/H] = -2.04 (upper limit)<br><i>[C/α] = +0.80 (lower limit), [N/α] = -0.02 (unconstrained)</i></td><td><a href='corner/PB6291_sys21_comp2_corner.png'><img src='corner/PB6291_sys21_comp2_corner.png'></a></td><td><a href='ionization_models/PB6291_sys21_comp2_model.png'><img src='ionization_models/PB6291_sys21_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.71838<br>14.93 ± 0.09</td><td>log n = -2.54<br><span class='lim'>[α/H] = -1.70 <sup>+0.92</sup><sub>−0.90</sub> (upper limit)</span><br>[C/H] = -0.78 (detection)<br>[N/H] = -1.88 (upper limit)<br><i>[C/α] = +0.86 (lower limit), [N/α] = -0.07 (unconstrained)</i></td><td><a href='corner/PB6291_sys21_comp3_corner.png'><img src='corner/PB6291_sys21_comp3_corner.png'></a></td><td><a href='ionization_models/PB6291_sys21_comp3_model.png'><img src='ionization_models/PB6291_sys21_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys22'>PB6291 &nbsp;sys 22</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys22_vplot.png'><img src='velocity_plots/PB6291_sys22_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys22_hst.png'><img src='galaxy_images/PB6291_sys22_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys22_muse.png'><img src='galaxy_images/PB6291_sys22_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.20246<br>14.67 ± 0.12</td><td>log n = -3.30<br><span class='lim'>[α/H] = -1.62 <sup>+1.01</sup><sub>−0.92</sub> (upper limit)</span><br>[C/H] = -0.72 (detection)<br>[N/H] = -1.68 (upper limit)<br><i>[C/α] = +0.93 (lower limit), [N/α] = -0.01 (unconstrained)</i></td><td><a href='corner/PB6291_sys22_comp2_corner.png'><img src='corner/PB6291_sys22_comp2_corner.png'></a></td><td><a href='ionization_models/PB6291_sys22_comp2_model.png'><img src='ionization_models/PB6291_sys22_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.20257<br>14.78 ± 0.05</td><td>log n = -3.20<br><span class='lim'>[α/H] = -1.69 <sup>+0.92</sup><sub>−0.91</sub> (upper limit)</span><br>[C/H] = -0.79 (detection)<br>[N/H] = -1.63 (upper limit)<br><i>[C/α] = +0.92 (lower limit), [N/α] = +0.10 (unconstrained)</i></td><td><a href='corner/PB6291_sys22_comp3_corner.png'><img src='corner/PB6291_sys22_comp3_corner.png'></a></td><td><a href='ionization_models/PB6291_sys22_comp3_model.png'><img src='ionization_models/PB6291_sys22_comp3_model.png'></a></td></tr>
+<tr><td>4</td><td>0.20306<br>14.82 ± 0.04</td><td>log n = -3.40<br><span class='lim'>[α/H] = -1.53 <sup>+1.03</sup><sub>−0.99</sub> (upper limit)</span><br>[C/H] = -0.48 (detection)<br>[N/H] = -1.69 (upper limit)<br><i>[C/α] = +1.07 (lower limit), [N/α] = -0.12 (unconstrained)</i></td><td><a href='corner/PB6291_sys22_comp4_corner.png'><img src='corner/PB6291_sys22_comp4_corner.png'></a></td><td><a href='ionization_models/PB6291_sys22_comp4_model.png'><img src='ionization_models/PB6291_sys22_comp4_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys23'>PB6291 &nbsp;sys 23</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys23_vplot.png'><img src='velocity_plots/PB6291_sys23_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys23_hst.png'><img src='galaxy_images/PB6291_sys23_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys23_muse.png'><img src='galaxy_images/PB6291_sys23_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.39913<br>16.89 ± 0.06</td><td>log n = -2.44<br><span>[α/H] = -0.87 <sup>+0.07</sup><sub>−0.07</sub> (detection)</span><br>[C/H] = -1.16 (detection)<br>[N/H] = -1.09 (detection)<br><i>[C/α] = -0.29 (detection), [N/α] = -0.22 (detection)</i></td><td><a href='corner/PB6291_sys23_comp2_corner.png'><img src='corner/PB6291_sys23_comp2_corner.png'></a></td><td><a href='ionization_models/PB6291_sys23_comp2_model.png'><img src='ionization_models/PB6291_sys23_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys24'>PB6291 &nbsp;sys 24</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys24_vplot.png'><img src='velocity_plots/PB6291_sys24_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys24_hst.png'><img src='galaxy_images/PB6291_sys24_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys24_muse.png'><img src='galaxy_images/PB6291_sys24_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.53536<br>15.37 ± 0.03</td><td>log n = -2.98<br><span>[α/H] = -0.67 <sup>+1.18</sup><sub>−0.99</sub> (detection)</span><br>[C/H] = -1.32 (detection)<br>[N/H] = -1.88 (upper limit)<br><i>[C/α] = -0.65 (detection), [N/α] = -1.14 (upper limit)</i></td><td><a href='corner/PB6291_sys24_comp1_corner.png'><img src='corner/PB6291_sys24_comp1_corner.png'></a></td><td><a href='ionization_models/PB6291_sys24_comp1_model.png'><img src='ionization_models/PB6291_sys24_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PB6291_sys50'>PB6291 &nbsp;sys 50</h2>
+<div class='row'><a href='velocity_plots/PB6291_sys50_vplot.png'><img src='velocity_plots/PB6291_sys50_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PB6291_sys50_hst.png'><img src='galaxy_images/PB6291_sys50_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PB6291_sys50_muse.png'><img src='galaxy_images/PB6291_sys50_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.26106<br>14.77 ± 0.02</td><td>log n = -3.27<br><span class='lim'>[α/H] = -1.72 <sup>+0.82</sup><sub>−0.85</sub> (upper limit)</span><br>[C/H] = -0.61 (detection)<br>[N/H] = -1.67 (upper limit)<br><i>[C/α] = +1.21 (lower limit), [N/α] = +0.12 (unconstrained)</i></td><td><a href='corner/PB6291_sys50_comp1_corner.png'><img src='corner/PB6291_sys50_comp1_corner.png'></a></td><td><a href='ionization_models/PB6291_sys50_comp1_model.png'><img src='ionization_models/PB6291_sys50_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PG1522+101_sys25'>PG1522+101 &nbsp;sys 25</h2>
+<div class='row'><a href='velocity_plots/PG1522+101_sys25_vplot.png'><img src='velocity_plots/PG1522+101_sys25_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PG1522+101_sys25_hst.png'><img src='galaxy_images/PG1522+101_sys25_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PG1522+101_sys25_muse.png'><img src='galaxy_images/PG1522+101_sys25_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.57231<br>15.64 ± 0.01</td><td>log n = -2.63<br><span class='lim'>[α/H] = -1.81 <sup>+0.85</sup><sub>−0.83</sub> (upper limit)</span><br>[C/H] = -2.05 (upper limit)<br>[N/H] = -2.00 (upper limit)<br><i>[C/α] = -0.07 (unconstrained), [N/α] = -0.16 (unconstrained)</i></td><td><a href='corner/PG1522+101_sys25_comp1_corner.png'><img src='corner/PG1522+101_sys25_comp1_corner.png'></a></td><td><a href='ionization_models/PG1522+101_sys25_comp1_model.png'><img src='ionization_models/PG1522+101_sys25_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PG1522+101_sys26'>PG1522+101 &nbsp;sys 26</h2>
+<div class='row'><a href='velocity_plots/PG1522+101_sys26_vplot.png'><img src='velocity_plots/PG1522+101_sys26_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PG1522+101_sys26_hst.png'><img src='galaxy_images/PG1522+101_sys26_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PG1522+101_sys26_muse.png'><img src='galaxy_images/PG1522+101_sys26_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.72886<br>16.49 ± 0.04</td><td>log n = -2.92<br><span class='lim'>[α/H] = -2.36 <sup>+0.19</sup><sub>−0.23</sub> (upper limit)</span><br>[C/H] = -2.61 (upper limit)<br>[N/H] = -2.81 (upper limit)<br><i>[C/α] = -0.22 (unconstrained), [N/α] = -0.40 (unconstrained)</i></td><td><a href='corner/PG1522+101_sys26_comp1_corner.png'><img src='corner/PG1522+101_sys26_comp1_corner.png'></a></td><td><a href='ionization_models/PG1522+101_sys26_comp1_model.png'><img src='ionization_models/PG1522+101_sys26_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.72880<br>15.96 ± 0.08</td><td>log n = -1.76<br><span class='lim'>[α/H] = -2.05 <sup>+0.66</sup><sub>−0.64</sub> (upper limit)</span><br>[C/H] = -2.01 (upper limit)<br>[N/H] = -1.83 (upper limit)<br><i>[C/α] = +0.07 (unconstrained), [N/α] = +0.20 (unconstrained)</i></td><td><a href='corner/PG1522+101_sys26_comp2_corner.png'><img src='corner/PG1522+101_sys26_comp2_corner.png'></a></td><td><a href='ionization_models/PG1522+101_sys26_comp2_model.png'><img src='ionization_models/PG1522+101_sys26_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='PG1522+101_sys27'>PG1522+101 &nbsp;sys 27</h2>
+<div class='row'><a href='velocity_plots/PG1522+101_sys27_vplot.png'><img src='velocity_plots/PG1522+101_sys27_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PG1522+101_sys27_hst.png'><img src='galaxy_images/PG1522+101_sys27_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PG1522+101_sys27_muse.png'><img src='galaxy_images/PG1522+101_sys27_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.31959<br>14.54 ± 0.02</td><td>log n = -3.16<br><span class='lim'>[α/H] = -1.27 <sup>+1.14</sup><sub>−1.18</sub> (upper limit)</span><br>[C/H] = -0.74 (detection)<br>[N/H] = -1.35 (upper limit)<br><i>[C/α] = +0.65 (lower limit), [N/α] = +0.02 (unconstrained)</i></td><td><a href='corner/PG1522+101_sys27_comp1_corner.png'><img src='corner/PG1522+101_sys27_comp1_corner.png'></a></td><td><a href='ionization_models/PG1522+101_sys27_comp1_model.png'><img src='ionization_models/PG1522+101_sys27_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PG1522+101_sys28'>PG1522+101 &nbsp;sys 28</h2>
+<div class='row'><a href='velocity_plots/PG1522+101_sys28_vplot.png'><img src='velocity_plots/PG1522+101_sys28_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PG1522+101_sys28_hst.png'><img src='galaxy_images/PG1522+101_sys28_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PG1522+101_sys28_muse.png'><img src='galaxy_images/PG1522+101_sys28_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.32770<br>14.35 ± 0.04</td><td>log n = -4.28<br><span>[α/H] = -0.81 <sup>+0.81</sup><sub>−0.69</sub> (detection)</span><br>[C/H] = -2.25 (upper limit)<br>[N/H] = -0.18 (detection)<br><i>[C/α] = -1.49 (upper limit), [N/α] = +0.63 (detection)</i></td><td><a href='corner/PG1522+101_sys28_comp1_corner.png'><img src='corner/PG1522+101_sys28_comp1_corner.png'></a></td><td><a href='ionization_models/PG1522+101_sys28_comp1_model.png'><img src='ionization_models/PG1522+101_sys28_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0232-04_sys46'>PKS0232-04 &nbsp;sys 46</h2>
+<div class='row'><a href='velocity_plots/PKS0232-04_sys46_vplot.png'><img src='velocity_plots/PKS0232-04_sys46_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0232-04_sys46_hst.png'><img src='galaxy_images/PKS0232-04_sys46_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PKS0232-04_sys46_muse.png'><img src='galaxy_images/PKS0232-04_sys46_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.69246<br>14.89 ± 0.03</td><td>log n = -2.07<br><span class='lim'>[α/H] = -1.76 <sup>+1.23</sup><sub>−0.87</sub> (upper limit)</span><br>[C/H] = -2.06 (upper limit)<br>[N/H] = -0.93 (unconstrained)<br><i>[C/α] = -0.27 (unconstrained), [N/α] = +0.66 (unconstrained)</i></td><td><a href='corner/PKS0232-04_sys46_comp1_corner.png'><img src='corner/PKS0232-04_sys46_comp1_corner.png'></a></td><td><a href='ionization_models/PKS0232-04_sys46_comp1_model.png'><img src='ionization_models/PKS0232-04_sys46_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0405-12_sys48'>PKS0405-12 &nbsp;sys 48</h2>
+<div class='row'><a href='velocity_plots/PKS0405-12_sys48_vplot.png'><img src='velocity_plots/PKS0405-12_sys48_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0405-12_sys48_hst.png'><img src='galaxy_images/PKS0405-12_sys48_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PKS0405-12_sys48_muse.png'><img src='galaxy_images/PKS0405-12_sys48_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.36073<br>15.09 ± 0.01</td><td>log n = -3.28<br><span class='lim'>[α/H] = -1.83 <sup>+0.97</sup><sub>−0.80</sub> (upper limit)</span><br>[C/H] = -0.65 (detection)<br>[N/H] = -1.99 (upper limit)<br><i>[C/α] = +1.18 (lower limit), [N/α] = -0.13 (unconstrained)</i></td><td><a href='corner/PKS0405-12_sys48_comp1_corner.png'><img src='corner/PKS0405-12_sys48_comp1_corner.png'></a></td><td><a href='ionization_models/PKS0405-12_sys48_comp1_model.png'><img src='ionization_models/PKS0405-12_sys48_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0552-640_sys3'>PKS0552-640 &nbsp;sys 3</h2>
+<div class='row'><a href='velocity_plots/PKS0552-640_sys3_vplot.png'><img src='velocity_plots/PKS0552-640_sys3_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0552-640_sys3_hst.png'><img src='galaxy_images/PKS0552-640_sys3_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PKS0552-640_sys3_muse.png'><img src='galaxy_images/PKS0552-640_sys3_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.34513<br>16.88 ± 0.01</td><td>log n = -2.80<br><span>[α/H] = -2.31 <sup>+0.29</sup><sub>−0.21</sub> (detection)</span><br>[C/H] = -2.56 (upper limit)<br>[N/H] = -2.30 (upper limit)<br><i>[C/α] = -0.25 (upper limit), [N/α] = -0.03 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys3_comp1_corner.png'><img src='corner/PKS0552-640_sys3_comp1_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys3_comp1_model.png'><img src='ionization_models/PKS0552-640_sys3_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0552-640_sys4'>PKS0552-640 &nbsp;sys 4</h2>
+<div class='row'><a href='velocity_plots/PKS0552-640_sys4_vplot.png'><img src='velocity_plots/PKS0552-640_sys4_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0552-640_sys4_hst.png'><img src='galaxy_images/PKS0552-640_sys4_hst.png' style='width:430px;border:none'></a><a href='galaxy_images/PKS0552-640_sys4_muse.png'><img src='galaxy_images/PKS0552-640_sys4_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.63163<br>14.17 ± 0.18</td><td>log n = -3.74<br><span>[α/H] = +0.50 <sup>+0.19</sup><sub>−0.17</sub> (detection)</span><br>[C/H] = -0.25 (detection)<br>[N/H] = -1.43 (upper limit)<br><i>[C/α] = -0.75 (detection), [N/α] = -1.93 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys4_comp1_corner.png'><img src='corner/PKS0552-640_sys4_comp1_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys4_comp1_model.png'><img src='ionization_models/PKS0552-640_sys4_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.63184<br>14.23 ± 0.15</td><td>log n = -3.79<br><span>[α/H] = +0.23 <sup>+0.16</sup><sub>−0.14</sub> (detection)</span><br>[C/H] = +0.31 (detection)<br>[N/H] = -1.46 (upper limit)<br><i>[C/α] = +0.06 (detection), [N/α] = -1.70 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys4_comp2_corner.png'><img src='corner/PKS0552-640_sys4_comp2_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys4_comp2_model.png'><img src='ionization_models/PKS0552-640_sys4_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.63018<br>14.92 ± 0.02</td><td>log n = -1.91<br><span class='lim'>[α/H] = -1.67 <sup>+1.11</sup><sub>−0.90</sub> (upper limit)</span><br>[C/H] = -1.97 (upper limit)<br>[N/H] = -1.44 (upper limit)<br><i>[C/α] = -0.29 (unconstrained), [N/α] = +0.21 (unconstrained)</i></td><td><a href='corner/PKS0552-640_sys4_comp3_corner.png'><img src='corner/PKS0552-640_sys4_comp3_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys4_comp3_model.png'><img src='ionization_models/PKS0552-640_sys4_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0552-640_sys5'>PKS0552-640 &nbsp;sys 5</h2>
+<div class='row'><a href='velocity_plots/PKS0552-640_sys5_vplot.png'><img src='velocity_plots/PKS0552-640_sys5_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0552-640_sys5_hst.png'><img src='galaxy_images/PKS0552-640_sys5_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PKS0552-640_sys5_muse.png'><img src='galaxy_images/PKS0552-640_sys5_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>3</td><td>0.14891<br>15.08 ± 0.05</td><td>log n = -3.47<br><span>[α/H] = -0.02 <sup>+0.06</sup><sub>−0.06</sub> (detection)</span><br>[C/H] = -1.06 (unconstrained)<br>[N/H] = -1.31 (upper limit)<br><i>[C/α] = -1.04 (unconstrained), [N/α] = -1.28 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys5_comp3_corner.png'><img src='corner/PKS0552-640_sys5_comp3_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys5_comp3_model.png'><img src='ionization_models/PKS0552-640_sys5_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='PKS0552-640_sys6'>PKS0552-640 &nbsp;sys 6</h2>
+<div class='row'><a href='velocity_plots/PKS0552-640_sys6_vplot.png'><img src='velocity_plots/PKS0552-640_sys6_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/PKS0552-640_sys6_hst.png'><img src='galaxy_images/PKS0552-640_sys6_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/PKS0552-640_sys6_muse.png'><img src='galaxy_images/PKS0552-640_sys6_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.44607<br>15.50 ± 0.10</td><td>log n = -3.71<br><span>[α/H] = -0.72 <sup>+0.14</sup><sub>−0.13</sub> (detection)</span><br>[C/H] = -1.87 (detection)<br>[N/H] = -2.23 (upper limit)<br><i>[C/α] = -1.15 (detection), [N/α] = -1.50 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys6_comp2_corner.png'><img src='corner/PKS0552-640_sys6_comp2_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys6_comp2_model.png'><img src='ionization_models/PKS0552-640_sys6_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.44613<br>15.76 ± 0.05</td><td>log n = -3.59<br><span>[α/H] = -0.94 <sup>+0.09</sup><sub>−0.09</sub> (detection)</span><br>[C/H] = -1.43 (detection)<br>[N/H] = -2.40 (upper limit)<br><i>[C/α] = -0.50 (detection), [N/α] = -1.46 (upper limit)</i></td><td><a href='corner/PKS0552-640_sys6_comp3_corner.png'><img src='corner/PKS0552-640_sys6_comp3_corner.png'></a></td><td><a href='ionization_models/PKS0552-640_sys6_comp3_model.png'><img src='ionization_models/PKS0552-640_sys6_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys29'>Q0107-0235 &nbsp;sys 29</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys29_vplot.png'><img src='velocity_plots/Q0107-0235_sys29_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys29_hst.png'><img src='galaxy_images/Q0107-0235_sys29_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys29_muse.png'><img src='galaxy_images/Q0107-0235_sys29_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.71894<br>15.57 ± 0.04</td><td>log n = -3.02<br><span>[α/H] = -0.72 <sup>+0.14</sup><sub>−0.14</sub> (detection)</span><br>[C/H] = -0.23 (detection)<br>[N/H] = -0.54 (detection)<br><i>[C/α] = +0.49 (detection), [N/α] = +0.18 (detection)</i></td><td><a href='corner/Q0107-0235_sys29_comp1_corner.png'><img src='corner/Q0107-0235_sys29_comp1_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys29_comp1_model.png'><img src='ionization_models/Q0107-0235_sys29_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys30'>Q0107-0235 &nbsp;sys 30</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys30_vplot.png'><img src='velocity_plots/Q0107-0235_sys30_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys30_hst.png'><img src='galaxy_images/Q0107-0235_sys30_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys30_muse.png'><img src='galaxy_images/Q0107-0235_sys30_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.38452<br>14.32 ± 0.16</td><td>log n = -3.23<br><span class='lim'>[α/H] = -1.34 <sup>+1.12</sup><sub>−1.11</sub> (upper limit)</span><br>[C/H] = -0.53 (detection)<br>[N/H] = -1.51 (upper limit)<br><i>[C/α] = +0.77 (lower limit), [N/α] = -0.13 (unconstrained)</i></td><td><a href='corner/Q0107-0235_sys30_comp1_corner.png'><img src='corner/Q0107-0235_sys30_comp1_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys30_comp1_model.png'><img src='ionization_models/Q0107-0235_sys30_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.38466<br>14.22 ± 0.16</td><td>log n = -3.42<br><span class='lim'>[α/H] = -1.29 <sup>+1.05</sup><sub>−1.15</sub> (upper limit)</span><br>[C/H] = -0.06 (detection)<br>[N/H] = -1.55 (upper limit)<br><i>[C/α] = +1.21 (lower limit), [N/α] = -0.18 (unconstrained)</i></td><td><a href='corner/Q0107-0235_sys30_comp2_corner.png'><img src='corner/Q0107-0235_sys30_comp2_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys30_comp2_model.png'><img src='ionization_models/Q0107-0235_sys30_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.38488<br>14.49 ± 0.07</td><td>log n = -3.19<br><span class='lim'>[α/H] = -1.50 <sup>+1.06</sup><sub>−1.03</sub> (upper limit)</span><br>[C/H] = -0.52 (detection)<br>[N/H] = -1.56 (upper limit)<br><i>[C/α] = +0.94 (lower limit), [N/α] = -0.03 (unconstrained)</i></td><td><a href='corner/Q0107-0235_sys30_comp3_corner.png'><img src='corner/Q0107-0235_sys30_comp3_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys30_comp3_model.png'><img src='ionization_models/Q0107-0235_sys30_comp3_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys31'>Q0107-0235 &nbsp;sys 31</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys31_vplot.png'><img src='velocity_plots/Q0107-0235_sys31_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys31_hst.png'><img src='galaxy_images/Q0107-0235_sys31_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys31_muse.png'><img src='galaxy_images/Q0107-0235_sys31_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>3</td><td>0.53570<br>14.98 ± 0.07</td><td>log n = -3.86<br><span>[α/H] = -0.42 <sup>+0.25</sup><sub>−0.22</sub> (detection)</span><br>[C/H] = -0.58 (detection)<br>[N/H] = -1.21 (detection)<br><i>[C/α] = -0.17 (detection), [N/α] = -0.81 (detection)</i></td><td><a href='corner/Q0107-0235_sys31_comp3_corner.png'><img src='corner/Q0107-0235_sys31_comp3_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys31_comp3_model.png'><img src='ionization_models/Q0107-0235_sys31_comp3_model.png'></a></td></tr>
+<tr><td>4</td><td>0.53621<br>15.25 ± 0.04</td><td>log n = -4.17<br><span>[α/H] = -1.58 <sup>+0.36</sup><sub>−0.31</sub> (detection)</span><br>[C/H] = -1.39 (detection)<br>[N/H] = -1.67 (upper limit)<br><i>[C/α] = +0.19 (detection), [N/α] = -0.14 (upper limit)</i></td><td><a href='corner/Q0107-0235_sys31_comp4_corner.png'><img src='corner/Q0107-0235_sys31_comp4_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys31_comp4_model.png'><img src='ionization_models/Q0107-0235_sys31_comp4_model.png'></a></td></tr>
+<tr><td>5</td><td>0.53652<br>15.65 ± 0.03</td><td>log n = -3.74<br><span>[α/H] = -1.33 <sup>+0.24</sup><sub>−0.21</sub> (detection)</span><br>[C/H] = -1.44 (detection)<br>[N/H] = -2.01 (upper limit)<br><i>[C/α] = -0.13 (detection), [N/α] = -0.70 (upper limit)</i></td><td><a href='corner/Q0107-0235_sys31_comp5_corner.png'><img src='corner/Q0107-0235_sys31_comp5_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys31_comp5_model.png'><img src='ionization_models/Q0107-0235_sys31_comp5_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys33'>Q0107-0235 &nbsp;sys 33</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys33_vplot.png'><img src='velocity_plots/Q0107-0235_sys33_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys33_hst.png'><img src='galaxy_images/Q0107-0235_sys33_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys33_muse.png'><img src='galaxy_images/Q0107-0235_sys33_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.39951<br>14.38 ± 0.06</td><td>log n = -4.28<br><span>[α/H] = -0.32 <sup>+0.70</sup><sub>−0.62</sub> (detection)</span><br>[C/H] = -0.08 (detection)<br>[N/H] = -1.92 (upper limit)<br><i>[C/α] = +0.19 (detection), [N/α] = -1.57 (upper limit)</i></td><td><a href='corner/Q0107-0235_sys33_comp2_corner.png'><img src='corner/Q0107-0235_sys33_comp2_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys33_comp2_model.png'><img src='ionization_models/Q0107-0235_sys33_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys34'>Q0107-0235 &nbsp;sys 34</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys34_vplot.png'><img src='velocity_plots/Q0107-0235_sys34_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys34_hst.png'><img src='galaxy_images/Q0107-0235_sys34_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys34_muse.png'><img src='galaxy_images/Q0107-0235_sys34_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.55746<br>14.42 ± 0.30</td><td>log n = -4.10<br><span>[α/H] = -0.55 <sup>+0.30</sup><sub>−0.32</sub> (detection)</span><br>[C/H] = -0.71 (detection)<br>[N/H] = -2.13 (upper limit)<br><i>[C/α] = -0.16 (detection), [N/α] = -1.54 (upper limit)</i></td><td><a href='corner/Q0107-0235_sys34_comp1_corner.png'><img src='corner/Q0107-0235_sys34_comp1_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys34_comp1_model.png'><img src='ionization_models/Q0107-0235_sys34_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.55763<br>14.82 ± 0.12</td><td>log n = -4.07<br><span>[α/H] = -0.87 <sup>+0.18</sup><sub>−0.20</sub> (detection)</span><br>[C/H] = -1.46 (detection)<br>[N/H] = -2.35 (upper limit)<br><i>[C/α] = -0.60 (detection), [N/α] = -1.45 (upper limit)</i></td><td><a href='corner/Q0107-0235_sys34_comp2_corner.png'><img src='corner/Q0107-0235_sys34_comp2_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys34_comp2_model.png'><img src='ionization_models/Q0107-0235_sys34_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='Q0107-0235_sys52'>Q0107-0235 &nbsp;sys 52</h2>
+<div class='row'><a href='velocity_plots/Q0107-0235_sys52_vplot.png'><img src='velocity_plots/Q0107-0235_sys52_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q0107-0235_sys52_hst.png'><img src='galaxy_images/Q0107-0235_sys52_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q0107-0235_sys52_muse.png'><img src='galaxy_images/Q0107-0235_sys52_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.17775<br>14.58 ± 0.07</td><td>log n = -3.16<br><span class='lim'>[α/H] = -1.45 <sup>+1.14</sup><sub>−1.05</sub> (upper limit)</span><br>[C/H] = -1.24 (unconstrained)<br>[N/H] = -1.38 (unconstrained)<br><i>[C/α] = +0.24 (unconstrained), [N/α] = +0.09 (unconstrained)</i></td><td><a href='corner/Q0107-0235_sys52_comp2_corner.png'><img src='corner/Q0107-0235_sys52_comp2_corner.png'></a></td><td><a href='ionization_models/Q0107-0235_sys52_comp2_model.png'><img src='ionization_models/Q0107-0235_sys52_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='Q1354+048_sys35'>Q1354+048 &nbsp;sys 35</h2>
+<div class='row'><a href='velocity_plots/Q1354+048_sys35_vplot.png'><img src='velocity_plots/Q1354+048_sys35_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1354+048_sys35_hst.png'><img src='galaxy_images/Q1354+048_sys35_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1354+048_sys35_muse.png'><img src='galaxy_images/Q1354+048_sys35_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.60993<br>14.66 ± 0.04</td><td>log n = -3.13<br><span>[α/H] = +0.18 <sup>+0.26</sup><sub>−0.16</sub> (detection)</span><br>[C/H] = -0.06 (detection)<br>[N/H] = -1.90 (upper limit)<br><i>[C/α] = -0.27 (detection), [N/α] = -2.11 (upper limit)</i></td><td><a href='corner/Q1354+048_sys35_comp1_corner.png'><img src='corner/Q1354+048_sys35_comp1_corner.png'></a></td><td><a href='ionization_models/Q1354+048_sys35_comp1_model.png'><img src='ionization_models/Q1354+048_sys35_comp1_model.png'></a></td></tr>
+<tr><td>2</td><td>0.61027<br>15.28 ± 0.02</td><td>log n = -3.46<br><span>[α/H] = -0.12 <sup>+0.04</sup><sub>−0.04</sub> (detection)</span><br>[C/H] = -0.71 (detection)<br>[N/H] = -0.68 (detection)<br><i>[C/α] = -0.59 (detection), [N/α] = -0.55 (detection)</i></td><td><a href='corner/Q1354+048_sys35_comp2_corner.png'><img src='corner/Q1354+048_sys35_comp2_corner.png'></a></td><td><a href='ionization_models/Q1354+048_sys35_comp2_model.png'><img src='ionization_models/Q1354+048_sys35_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='Q1354+048_sys36'>Q1354+048 &nbsp;sys 36</h2>
+<div class='row'><a href='velocity_plots/Q1354+048_sys36_vplot.png'><img src='velocity_plots/Q1354+048_sys36_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1354+048_sys36_hst.png'><img src='galaxy_images/Q1354+048_sys36_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1354+048_sys36_muse.png'><img src='galaxy_images/Q1354+048_sys36_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.44241<br>14.92 ± 0.19</td><td>log n = -2.44<br><span class='lim'>[α/H] = -1.32 <sup>+1.41</sup><sub>−1.16</sub> (upper limit)</span><br>[C/H] = -2.05 (upper limit)<br>[N/H] = -1.01 (unconstrained)<br><i>[C/α] = -0.63 (unconstrained), [N/α] = +0.16 (unconstrained)</i></td><td><a href='corner/Q1354+048_sys36_comp1_corner.png'><img src='corner/Q1354+048_sys36_comp1_corner.png'></a></td><td><a href='ionization_models/Q1354+048_sys36_comp1_model.png'><img src='ionization_models/Q1354+048_sys36_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='Q1354+048_sys37'>Q1354+048 &nbsp;sys 37</h2>
+<div class='row'><a href='velocity_plots/Q1354+048_sys37_vplot.png'><img src='velocity_plots/Q1354+048_sys37_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1354+048_sys37_hst.png'><img src='galaxy_images/Q1354+048_sys37_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1354+048_sys37_muse.png'><img src='galaxy_images/Q1354+048_sys37_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.32865<br>18.08 ± 0.07</td><td>log n = -1.35<br><span class='lim'>[α/H] = -2.50 <sup>+0.36</sup><sub>−0.34</sub> (upper limit)</span><br>[C/H] = -2.59 (upper limit)<br>[N/H] = -0.99 (unconstrained)<br><i>[C/α] = -0.07 (unconstrained), [N/α] = +1.51 (unconstrained)</i></td><td><a href='corner/Q1354+048_sys37_comp1_corner.png'><img src='corner/Q1354+048_sys37_comp1_corner.png'></a></td><td><a href='ionization_models/Q1354+048_sys37_comp1_model.png'><img src='ionization_models/Q1354+048_sys37_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='Q1354+048_sys38'>Q1354+048 &nbsp;sys 38</h2>
+<div class='row'><a href='velocity_plots/Q1354+048_sys38_vplot.png'><img src='velocity_plots/Q1354+048_sys38_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1354+048_sys38_hst.png'><img src='galaxy_images/Q1354+048_sys38_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1354+048_sys38_muse.png'><img src='galaxy_images/Q1354+048_sys38_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.64050<br>15.06 ± 0.05</td><td>log n = -2.12<br><span class='lim'>[α/H] = -1.14 <sup>+1.24</sup><sub>−1.26</sub> (upper limit)</span><br>[C/H] = -1.97 (upper limit)<br>[N/H] = -1.54 (upper limit)<br><i>[C/α] = -0.70 (unconstrained), [N/α] = -0.24 (unconstrained)</i></td><td><a href='corner/Q1354+048_sys38_comp1_corner.png'><img src='corner/Q1354+048_sys38_comp1_corner.png'></a></td><td><a href='ionization_models/Q1354+048_sys38_comp1_model.png'><img src='ionization_models/Q1354+048_sys38_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='Q1435-0134_sys1'>Q1435-0134 &nbsp;sys 1</h2>
+<div class='row'><a href='velocity_plots/Q1435-0134_sys1_vplot.png'><img src='velocity_plots/Q1435-0134_sys1_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1435-0134_sys1_hst.png'><img src='galaxy_images/Q1435-0134_sys1_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1435-0134_sys1_muse.png'><img src='galaxy_images/Q1435-0134_sys1_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.61189<br>15.01 ± 0.02</td><td>log n = -2.80<br><span>[α/H] = -0.43 <sup>+0.15</sup><sub>−0.15</sub> (detection)</span><br>[C/H] = -0.77 (detection)<br>[N/H] = -0.31 (detection)<br><i>[C/α] = -0.34 (detection), [N/α] = +0.12 (detection)</i></td><td><a href='corner/Q1435-0134_sys1_comp1_corner.png'><img src='corner/Q1435-0134_sys1_comp1_corner.png'></a></td><td><a href='ionization_models/Q1435-0134_sys1_comp1_model.png'><img src='ionization_models/Q1435-0134_sys1_comp1_model.png'></a></td></tr>
+<tr><td>3</td><td>0.61271<br>15.28 ± 0.01</td><td>log n = -2.99<br><span>[α/H] = -0.40 <sup>+0.04</sup><sub>−0.04</sub> (detection)</span><br>[C/H] = -0.81 (detection)<br>[N/H] = -0.41 (detection)<br><i>[C/α] = -0.41 (detection), [N/α] = -0.00 (detection)</i></td><td><a href='corner/Q1435-0134_sys1_comp3_corner.png'><img src='corner/Q1435-0134_sys1_comp3_corner.png'></a></td><td><a href='ionization_models/Q1435-0134_sys1_comp3_model.png'><img src='ionization_models/Q1435-0134_sys1_comp3_model.png'></a></td></tr>
+<tr><td>4</td><td>0.61290<br>14.47 ± 0.03</td><td>log n = -3.05<br><span>[α/H] = -0.09 <sup>+0.18</sup><sub>−0.11</sub> (detection)</span><br>[C/H] = -0.26 (detection)<br>[N/H] = -0.98 (unconstrained)<br><i>[C/α] = -0.16 (detection), [N/α] = -0.93 (unconstrained)</i></td><td><a href='corner/Q1435-0134_sys1_comp4_corner.png'><img src='corner/Q1435-0134_sys1_comp4_corner.png'></a></td><td><a href='ionization_models/Q1435-0134_sys1_comp4_model.png'><img src='ionization_models/Q1435-0134_sys1_comp4_model.png'></a></td></tr>
+</table>
+<h2 id='Q1435-0134_sys42'>Q1435-0134 &nbsp;sys 42</h2>
+<div class='row'><a href='velocity_plots/Q1435-0134_sys42_vplot.png'><img src='velocity_plots/Q1435-0134_sys42_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/Q1435-0134_sys42_hst.png'><img src='galaxy_images/Q1435-0134_sys42_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/Q1435-0134_sys42_muse.png'><img src='galaxy_images/Q1435-0134_sys42_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.29897<br>15.29 ± 0.03</td><td>log n = -2.17<br><span class='lim'>[α/H] = -1.85 <sup>+1.04</sup><sub>−0.80</sub> (upper limit)</span><br>[C/H] = -2.28 (upper limit)<br>[N/H] = -0.99 (unconstrained)<br><i>[C/α] = -0.35 (unconstrained), [N/α] = +0.72 (unconstrained)</i></td><td><a href='corner/Q1435-0134_sys42_comp2_corner.png'><img src='corner/Q1435-0134_sys42_comp2_corner.png'></a></td><td><a href='ionization_models/Q1435-0134_sys42_comp2_model.png'><img src='ionization_models/Q1435-0134_sys42_comp2_model.png'></a></td></tr>
+</table>
+<h2 id='RXSJ02282-4057_sys44'>RXSJ02282-4057 &nbsp;sys 44</h2>
+<div class='row'><a href='velocity_plots/RXSJ02282-4057_sys44_vplot.png'><img src='velocity_plots/RXSJ02282-4057_sys44_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/RXSJ02282-4057_sys44_hst.png'><img src='galaxy_images/RXSJ02282-4057_sys44_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/RXSJ02282-4057_sys44_muse.png'><img src='galaxy_images/RXSJ02282-4057_sys44_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>1</td><td>0.20708<br>15.16 ± 0.01</td><td>log n = -4.07<br><span>[α/H] = -0.12 <sup>+0.04</sup><sub>−0.05</sub> (detection)</span><br>[C/H] = -0.67 (detection)<br>[N/H] = -0.62 (detection)<br><i>[C/α] = -0.54 (detection), [N/α] = -0.50 (detection)</i></td><td><a href='corner/RXSJ02282-4057_sys44_comp1_corner.png'><img src='corner/RXSJ02282-4057_sys44_comp1_corner.png'></a></td><td><a href='ionization_models/RXSJ02282-4057_sys44_comp1_model.png'><img src='ionization_models/RXSJ02282-4057_sys44_comp1_model.png'></a></td></tr>
+</table>
+<h2 id='TEX0206-048_sys45'>TEX0206-048 &nbsp;sys 45</h2>
+<div class='row'><a href='velocity_plots/TEX0206-048_sys45_vplot.png'><img src='velocity_plots/TEX0206-048_sys45_vplot.png' style='width:620px'></a><div class='gal'><a href='galaxy_images/TEX0206-048_sys45_hst.png'><img src='galaxy_images/TEX0206-048_sys45_hst.png' style='width:330px;border:none'></a><a href='galaxy_images/TEX0206-048_sys45_muse.png'><img src='galaxy_images/TEX0206-048_sys45_muse.png' style='width:330px;border:none'></a></div></div><table><tr><th>comp</th><th>z, log N(HI)</th><th>log n, [α/H], [C/H], [N/H] (sampled); [C/α], [N/α] (derived)</th><th>corner</th><th>ionization model</th></tr>
+<tr><td>2</td><td>0.38986<br>15.77 ± 0.03</td><td>log n = -2.43<br><span class='lim'>[α/H] = -1.45 <sup>+1.02</sup><sub>−1.08</sub> (upper limit)</span><br>[C/H] = -1.77 (upper limit)<br>[N/H] = -1.98 (upper limit)<br><i>[C/α] = -0.28 (unconstrained), [N/α] = -0.29 (unconstrained)</i></td><td><a href='corner/TEX0206-048_sys45_comp2_corner.png'><img src='corner/TEX0206-048_sys45_comp2_corner.png'></a></td><td><a href='ionization_models/TEX0206-048_sys45_comp2_model.png'><img src='ionization_models/TEX0206-048_sys45_comp2_model.png'></a></td></tr>
+<tr><td>3</td><td>0.39047<br>19.02 ± 0.02</td><td>log n = -2.25<br><span>[α/H] = -1.21 <sup>+0.32</sup><sub>−0.30</sub> (detection)</span><br>[C/H] = -1.20 (detection)<br>[N/H] = -1.79 (detection)<br><i>[C/α] = +0.01 (detection), [N/α] = -0.52 (detection)</i></td><td><a href='corner/TEX0206-048_sys45_comp3_corner.png'><img src='corner/TEX0206-048_sys45_comp3_corner.png'></a></td><td><a href='ionization_models/TEX0206-048_sys45_comp3_model.png'><img src='ionization_models/TEX0206-048_sys45_comp3_model.png'></a></td></tr>
+</table>
+</body></html>

@@ -1,0 +1,26 @@
+[
+ {
+  "file": "XH_pairs_props.png",
+  "pdf": "XH_pairs_props.pdf",
+  "data": "XH_pairs_props_stats.csv",
+  "title": "[X/H] vs galaxy D/Rvir, stellar mass, SFR and sSFR (all galaxy–absorber pairs)",
+  "caption": "Every KS19 component plotted against every galaxy within ±500 km/s of its absorber (top: all pairs; bottom: galaxies with D/Rvir < 1). [X/H] = [α/H] (circles) where an α-element ion is detected, [C/H] (squares) for carbon-only components; posterior median and 16–84%; hollow = upper limit (95th percentile). Prominent points: the component's smallest-D/Rvir host galaxy; faint: other paired galaxies. Leftward arrows: SFR upper limits. Censored Kendall τ (upper limits in [X/H]): host only, p from permuting host properties among hosts; all pairs, p_block from permuting galaxy sets among absorbers. Abundance-parameterised KS19 models (independent flat priors on [α/H], [C/H], [N/H]).",
+  "added": "2026-11-19"
+ },
+ {
+  "file": "azimuth_XH_CA_NA.png",
+  "pdf": "azimuth_XH_CA_NA.pdf",
+  "data": "azimuth_XH_CA_NA_stats.csv",
+  "title": "[X/H], [C/α] and [N/α] vs host azimuthal angle (left: all; right: D/Rvir < 1)",
+  "caption": "KS19 components vs the azimuthal angle Φ of their host (smallest-D/Rvir galaxy within ±500 km/s) measured from HST Sérsic fits (0 = major, 90 = minor axis); good sample: HST position offset < 1″, resolved, inclination > 40°. Left column: all hosts; right: D/Rvir < 1. Top: [X/H] = [α/H] where an α-element ion is detected, [C/H] (red squares) for carbon-only components; middle: [C/α]; bottom: [N/α]; unconstrained values excluded. Points: posterior median and 16–84% (Φ: 16–84% of the morphology posterior); ▼/▲ upper (95th percentile) / lower (5th percentile) limits; colour: D/Rvir. Survival analysis: red line and band = Turnbull NPMLE median per 30° bin with 68% range from Monte Carlo over the Φ and KS19 posteriors plus a host bootstrap; censored Kendall τ (two-sided censoring) with p from permuting Φ among hosts; minor − major = difference of the 60–90° and 0–30° medians. Abundance-parameterised KS19 models. Statistics per panel (τ, p, bin medians, minor − major) are in the data file.",
+  "added": "2026-11-19"
+ },
+ {
+  "file": "aH_vs_ratios.png",
+  "pdf": "aH_vs_ratios.pdf",
+  "data": "aH_vs_ratios_stats.csv",
+  "title": "[C/α] and [N/α] vs [α/H] of the KS19 components",
+  "caption": "All KS19 components (abundance-parameterised posteriors: independent flat priors on [α/H], [C/H], [N/H]). Filled circles: both quantities constrained (posterior median and 16–84%); ▼: ratio upper limit (95th percentile) with [α/H] constrained; hollow circles with arrows: [α/H] upper limit (95th percentile) and ratio lower limit (5th percentile) — these components are measured in [C/H] only, so they move along slope −1 in this plane. Unconstrained ratios are not shown (16 in [C/α]; in [N/α] all 37 components with an [α/H] upper limit). Colour: azimuthal-angle bin of the host (smallest-D/Rvir galaxy; HST good sample with inclination > 40°): blue Φ = 0–30° (major axis), amber 30–60°, red 60–90° (minor axis); grey: no reliable Φ. Dashed lines: solar. Kendall τ for components with both quantities constrained is in the data file ([C/α]: 40 components; [N/α]: 13); since [X/α] = [X/H] − [α/H], measurement errors anticorrelate the two axes.",
+  "added": "2026-11-20"
+ }
+]
